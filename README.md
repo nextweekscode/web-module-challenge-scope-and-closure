@@ -115,6 +115,22 @@ addSix(21); // returns 27
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
 
+Functional and Object-orienated- use different methods for storing and manipulating the data.
+
+Functional programming -data cannot be stored in objects and it can only be transformed by creating functions. 
+object-oriented programming -data is stored in objects. 
+
+Object-Orienated - it is hard to maintain objects while increasing levels of inheritence.
+Functional - always requires a new object and there for takes up a lot of memory.
+
+Functional programming is more WHAT WE ARE DOING.
+Object-orienated is more HOW WE ARE DOING.
+
+Functional programming - provides high performance in processing the large data for the applications. 
+Object-oriented programming - is not good for big data processing.
+
+
+
 ## Resources
 
 📚 [Scope and Closures Guide](https://css-tricks.com/javascript-scope-closures/)
