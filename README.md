@@ -42,6 +42,13 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure - The ability for a child or inner function to access variables from a higher level scope. Even if that variable has been
+called terminated or closed
+
+
+
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +70,18 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+
+
+
 c. What is the lexical scope of `newRoll`? 
+
+
+
 
 ### Task 2c - Exit Ticket
 
@@ -97,6 +114,22 @@ addSix(21); // returns 27
 ```
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+
+Functional and Object-orienated- use different methods for storing and manipulating the data.
+
+Functional programming -data cannot be stored in objects and it can only be transformed by creating functions. 
+object-oriented programming -data is stored in objects. 
+
+Object-Orienated - it is hard to maintain objects while increasing levels of inheritence.
+Functional - always requires a new object and there for takes up a lot of memory.
+
+Functional programming is more WHAT WE ARE DOING.
+Object-orienated is more HOW WE ARE DOING.
+
+Functional programming - provides high performance in processing the large data for the applications. 
+Object-oriented programming - is not good for big data processing.
+
+
 
 ## Resources
 

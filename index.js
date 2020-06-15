@@ -14,10 +14,10 @@
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
 */
-function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
-}
-
+// function processFirstItem(stringList, callback) {
+//   return callback(stringList[0])
+// }
+// console.log(processFirstItem(['foo', 'bar'], (str) => str + str));
 // ⭐️ Example Challenge END ⭐️
 
 
@@ -28,39 +28,51 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * counter2 - is using hoisting?
+ * counter1 - is using closure
+ * 
+ * 
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * counter1 - it has a function within a function
+ * 
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * 
+ * 
+ * counter1- if you are not needing to use count in other functions/variables, as it is locked within here
+ * counter2 - if you are needing to use count in other functions/variables.
 */
 
 // counter1 code
-function counterMaker() {
-  let count = 0;
-  return function counter() {
-   return count++;
-  }
-}
+// function counterMaker() {
+//   let count = 0;
+//   return function counter() {
+//    return count++;
+//   }
+// }
 
-const counter1 = counterMaker();
+// const counter1 = counterMaker();
 
-// counter2 code
-let count = 0;
+// // counter2 code
+// let count = 0;
 
-function counter2() {
-  return count++;
-}
+// function counter2() {
+//   return count++;
+// }
 
 
-/* Task 2: inning() 
+// /* Task 2: inning() 
 
-Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
+// Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
+ let score = Math.floor(Math.random()*2.5);
+ return score
 
-    /*Code Here*/
-
-}
+ }
+ console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -76,11 +88,19 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(callback, numberofInnings){
+  let finalTally = {'Home': 0, 'Away': 0};
+  for(i = 0; i < numberofInnings; i++){
+    finalTally.Home += callback();
+    finalTally.Away += callback();
 }
+return {
+  finalTally
+}
+
+};
+console.log(finalScore(inning, 8));
+
 
 /* Task 4: 
 
@@ -103,8 +123,29 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(callback, numberOfInnings) {
+  let inningScores = [0, 0];
+  for (i=1; i <numberOfInnings; i++){
+    score1 = (inningScores[0] += callback());
+    score2 = (inningScores[1] += callback());
+    if (scoreboard[i] === 1){
+    inningScores.push(`${[i]}st inning: ${score1} - ${score2}`)
+    }
+    if (scoreboard[i] === 2){
+      inningScores.push(`${[i]}nd inning: ${score1} - ${score2}`)
+    }
+    if (scoreboard[i] === 3){
+      inningScores.push(`${[i]}rd inning: ${score1} - ${score2}`)
+    }
+    else{
+      inningScores.push(`${[i]}th inning: ${score1} - ${score2}`)
+    }
+
+  }
+  return inningScores
+  
+
 }
+console.log(scoreboard(inning, 9));
 
 
