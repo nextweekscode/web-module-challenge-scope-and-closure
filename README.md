@@ -42,6 +42,13 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure - The ability for a child or inner function to access variables from a higher level scope. Even if that variable has been
+called terminated or closed
+
+
+
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +70,18 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+
+
+
 c. What is the lexical scope of `newRoll`? 
+
+
+
 
 ### Task 2c - Exit Ticket
 
